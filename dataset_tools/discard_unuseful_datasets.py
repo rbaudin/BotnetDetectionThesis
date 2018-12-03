@@ -25,5 +25,6 @@ for sub_set in os.listdir(c.datasets_folder_general):
         print("========================================================")
         if len(infected_ips[sub_set][0]) == 0 and \
             len(normal_ips[sub_set][0]) == 0:
-            print("Moving dataset {} ({}) to {}".format(sub_set, dataset_folder, folder_other_datasets))
+            #print("Moving dataset {} ({}) to {}".format(sub_set, dataset_folder, folder_other_datasets))
+            print("Moving dataset {} ({}) to {}".format(sub_set, dataset_folder, c.datasets_discarded_folder))
             shutil.move(dataset_folder, c.datasets_discarded_folder)
