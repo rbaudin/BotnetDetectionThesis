@@ -86,7 +86,8 @@ with open('./normal_ips.json', 'w') as f:
 
 index = 0
 for sub_set in os.listdir(c.datasets_folder_general):
-    if sub_set.startswith(".") or not os.path.exists(c.datasets_folder_general + sub_set + '/bro/ssl.log'):
+    #if sub_set.startswith(".") or not os.path.exists(c.datasets_folder_general + sub_set + '/bro/ssl.log'):
+    if sub_set.startswith(".") or not os.path.exists(config.dataset_download + sub_set + '/bro/ssl.log') or not sub_set.startswith("CTU-Malware-Capture-Botnet-"):
         continue
 
     dataset_folder = c.datasets_folder_general + sub_set
